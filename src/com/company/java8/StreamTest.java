@@ -2,7 +2,9 @@ package com.company.java8;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -64,7 +66,7 @@ class Employee{
 
 public class StreamTest {
     static List<Employee> getEmployees(){
-        Employee e1 = new Employee("张三",18,8000.00);
+        Employee e1 = new Employee("张3",18,8000.00);
         Employee e2 = new Employee("张4",13,8011.00);
         Employee e3 = new Employee("张5",28,18000.00);
         Employee e4 = new Employee("张6",19,8400.00);
@@ -72,8 +74,8 @@ public class StreamTest {
         Employee e6 = new Employee("张8",15,8200.00);
         Employee e7 = new Employee("张9",22,9000.00);
         Employee e9 = new Employee("张9",22,9000.00);
-        Employee e8 = new Employee("张9",22,9000.00);
-        return Arrays.asList(e1,e2,e3,e4,e5,e6,e7);
+        Employee e8 = new Employee("张9",22,9001.00);
+        return Arrays.asList(e1,e2,e3,e4,e5,e6,e7,e8,e9);
     }
     public static void main(String[] args) {
         List<Employee> employees =  getEmployees();
@@ -96,6 +98,61 @@ public class StreamTest {
 
         //18 - 13 - 28 - 19 - 38 - 15 - 22
         //sore
+
+        //max min
+        //maxMinDemo(employees);
+
+        //count
+        //countDemo(employees);
+        //match
+        //match(employees);
+
+        //find
+        //find(employees);
+
+        //joining
+        //joining(employees);
+
+        //collectors
+        employees.stream().limit(3).collect(Collectors.toList());
+    }
+
+    private static void joining(List<Employee> employees) {
+        String name = employees.stream().map(Employee::getName).distinct().collect(Collectors.joining(","));
+        System.out.println("name:"+name);
+        //name:张3,张4,张5,张6,张7,张8,张9
+    }
+
+    private static void find(List<Employee> employees) {
+        Employee employee = employees.stream().findFirst().get();
+        System.out.println("first employee:"+employee);
+        Employee employee1 = employees.stream().findAny().get();
+        System.out.println("any employee:"+employee1);
+        //first employee:Employee{name='张3', age=18, salary=8000.0}
+        //any employee:Employee{name='张3', age=18, salary=8000.0}
+    }
+
+    private static void match(List<Employee> employees) {
+        System.out.println("是否所有员工都大于18岁："+ employees.stream().allMatch(e->e.getAge()>18));
+        System.out.println("是否所有员工都大于10岁："+ employees.stream().allMatch(e->e.getAge()>10));
+        System.out.println("是否有员工22岁："+ employees.stream().anyMatch(e->e.getAge()==22));
+        //是否所有员工都大于18岁：false
+        //是否所有员工都大于10岁：true
+        //是否有员工22岁：true
+    }
+
+    private static void countDemo(List<Employee> employees) {
+        System.out.println("employee个数："+ employees.stream().count());
+        //employee个数：9
+    }
+
+    private static void maxMinDemo(List<Employee> employees) {
+        Employee maxAgeEmployee = employees.stream().max(Comparator.comparing(Employee::getAge)).get();
+        System.out.println("maxAgeEmployee:"+maxAgeEmployee.toString());
+        Employee minAgeEmployee = employees.stream().min(Comparator.comparing(Employee::getAge)).get();
+        System.out.println("minAgeEmployee"+minAgeEmployee.toString());
+        //maxAgeEmployee:Employee{name='张7', age=38, salary=7000.0}
+        //minAgeEmployeeEmployee{name='张4', age=13, salary=8011.0}
     }
 
     private static void flatMapDemo() {
@@ -156,6 +213,14 @@ public class StreamTest {
         //Employee{name='张7', age=38, salary=7000.0}
         //Employee{name='张8', age=15, salary=8200.0}
         //Employee{name='张9', age=22, salary=9000.0}
+        employees.stream().map(Employee::getName).distinct().forEach(System.out::println);
+        //张3
+        //张4
+        //张5
+        //张6
+        //张7
+        //张8
+        //张9
     }
 
     private static void filterDemo(List<Employee> employees) {
