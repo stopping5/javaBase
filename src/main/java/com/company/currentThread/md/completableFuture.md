@@ -1,0 +1,3 @@
+CompletableFuture
+CompletableFuture提供了一种类似观察模式的机制
+? 1. 默认线程池为什么会因为main线程结束而导致守护线程关闭，但是用自定义的线程池则不会。

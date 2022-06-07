@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>java.util.concurrent.CompletableFuture</OriginalElement>
+  <nodes>
+    <node x="248.0" y="0.0">java.util.concurrent.Future</node>
+    <node x="0.0" y="0.0">java.util.concurrent.CompletionStage</node>
+    <node x="85.0" y="89.0">java.util.concurrent.CompletableFuture</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.util.concurrent.CompletableFuture" target="java.util.concurrent.Future">
+      <point x="63.0" y="-19.5" />
+      <point x="274.0" y="64.0" />
+      <point x="308.0" y="64.0" />
+      <point x="0.0" y="19.5" />
+    </edge>
+    <edge source="java.util.concurrent.CompletableFuture" target="java.util.concurrent.CompletionStage">
+      <point x="-63.0" y="-19.5" />
+      <point x="148.0" y="64.0" />
+      <point x="114.0" y="64.0" />
+      <point x="0.0" y="19.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="184.0" y="64.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

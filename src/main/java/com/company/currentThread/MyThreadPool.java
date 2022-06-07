@@ -26,7 +26,6 @@ public class MyThreadPool {
                 new LinkedBlockingQueue<>(3),
                 Executors.defaultThreadFactory(),
                 new ThreadPoolExecutor.AbortPolicy());
-
         /**
          * 核心线程：2
          * 线程池最大值：8
