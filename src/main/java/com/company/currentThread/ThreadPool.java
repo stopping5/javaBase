@@ -12,7 +12,7 @@ public class ThreadPool {
             5,
             1L,
             TimeUnit.SECONDS,
-            new LinkedBlockingQueue<>(10),
+            new LinkedBlockingQueue<>(3),
             Executors.defaultThreadFactory(),
             new ThreadPoolExecutor.CallerRunsPolicy());
 }
