@@ -1,0 +1,20 @@
+
+i	java:S116"ORename this field "HOST" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­º¨Ñüÿÿÿÿ
+i	java:S116"ORename this field "PORT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘²¥¦ûÿÿÿÿ
+<
+java:S1170"!Make this final field static too.(­º¨Ñüÿÿÿÿ
+<
+java:S1170"!Make this final field static too.(‘²¥¦ûÿÿÿÿ
+P
+java:S2209"5Change this instance-reference to a static reference.(„£¼µøÿÿÿÿ
+N	java:S106%"9Replace this use of System.out or System.err by a logger.(ü–ð
+S	java:S106E"9Replace this use of System.out or System.err by a logger.(½ ‰¸øÿÿÿÿ
+V	java:S125J"<This block of commented-out lines of code should be removed.(¼ºå©ùÿÿÿÿ
+P
+java:S1161V":Add the "@Override" annotation above this method signature(“–ýþ
+t
+java:S2142["^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+K
+java:S2209Z"5Change this instance-reference to a static reference.(ÔÐó
+C
+java:S1068"(Remove this unused "HOST" private field.(­º¨Ñüÿÿÿÿ

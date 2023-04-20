@@ -11,6 +11,25 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <!-- 自定义MANIFEST.MF -->
+        <maven.configuration.manifestFile>src/main/resources/META-INF/MANIFEST.MF</maven.configuration.manifestFile>
     </properties>
-    
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <archive>
+                        <!--       就是把前面的配置的MANIFEST.MF打入jar中，以指定premain的位置，否则会报：
+                                     Failed to find Premain-Class manifest attribute in
+                        -->
+                        <manifestFile>${maven.configuration.manifestFile}</manifestFile>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
