@@ -2,6 +2,7 @@ package com.company.struct;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -25,11 +26,17 @@ public class ListDemo {
             System.out.println(data.get(i));
         }*/
 
-        LinkList list = new LinkList();
+        LinkList<Integer> list = new LinkList();
         list.add(1);
         list.add(2);
         list.add(3);
         list.add(4);
         System.out.println(list.get(1));
+
+        LinkedList<String> linkedList = new LinkedList();
+        linkedList.add("1");
+        linkedList.add("2");
+        linkedList.add("3");
+        System.out.println(linkedList);
     }
 }

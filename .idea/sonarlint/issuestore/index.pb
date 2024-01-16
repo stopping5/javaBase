@@ -21,15 +21,3 @@ Z
 *src/main/java/com/company/io/FileDemo.java,5/5/5529ca6cf7550e6d5f008d25f4487ea5a500faf8
 X
 (src/main/java/com/company/io/IODemo.java,c/f/cf85ca8dd6bff90df42ed59b191d24e9cb444552
-g
-7src/main/java/com/company/exception/TryResouceDemo.java,9/0/906dc26c11e9c36412699f77ea81547e4f0398cc
-R
-"src/main/java/com/asm/ASMDemo.java,1/c/1ca2fa5404bb0db381c71dd4546805cf0b76f172
-[
-+src/main/java/com/aggent/JavaAgentDemo.java,8/e/8efcb628ceb2480c34c452ce45e324713dfed56a
-b
-2src/main/java/com/aggent/ClassFileTranstation.java,7/5/75002c5e8a9b5be01cdaf7896531188edd0268cd
-7
-pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
-[
-+src/main/java/com/aggent/JavaAgentTest.java,0/8/08408426a28177b441cf2e28b5e1c8f18f825d7d

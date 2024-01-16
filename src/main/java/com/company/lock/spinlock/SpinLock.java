@@ -8,6 +8,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
+ * 自旋锁
+ * 是指尝试获取锁的线程不能立即阻塞，而是采用循环的方法去尝试获取锁。这样的好处就是减少线程上下文的消耗，缺点是循环消耗CPU。
  * @Description SpinLock 自旋锁案例
  * @Author stopping
  * @date: 2021/4/18 11:13
@@ -24,6 +26,8 @@ public class SpinLock {
         Thread thread = Thread.currentThread();
         System.out.println("thread name"+thread.getName()+thread.getId()+"-> LOCK");
         //CAS期望null的时候保存获取锁的线程
+        //如果为空表示当前没有线程占用
+        //如果不为空，则表示有线程正在执行，所以需要自旋等待
         while (!atomicReference.compareAndSet(null,thread)){
 
         }
