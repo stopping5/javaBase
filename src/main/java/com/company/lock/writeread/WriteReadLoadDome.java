@@ -26,7 +26,7 @@ class MyCache{
 
     public Object get(String key)  {
         Object o = null;
-        //rwLock.readLock().lock();
+        rwLock.readLock().lock();
         try{
             System.out.println("正在读数据，"+key);
             TimeUnit.MILLISECONDS.sleep(300);
@@ -35,13 +35,13 @@ class MyCache{
         }catch (Exception e){
             System.out.println("读取数据失败");
         }finally {
-            //rwLock.readLock().unlock();
+            rwLock.readLock().unlock();
         }
         return o;
     }
 
     public void set(String key,Object val)  {
-        //rwLock.writeLock().lock();
+        rwLock.writeLock().lock();
         try {
             System.out.println("正在写入数据，"+key);
             TimeUnit.MILLISECONDS.sleep(300);
@@ -50,7 +50,7 @@ class MyCache{
         }catch (Exception e){
             System.out.println("写入数据异常");
         }finally {
-            //rwLock.writeLock().unlock();
+            rwLock.writeLock().unlock();
         }
     }
 }

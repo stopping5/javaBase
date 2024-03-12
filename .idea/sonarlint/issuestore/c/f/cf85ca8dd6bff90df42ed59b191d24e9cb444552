@@ -1,0 +1,50 @@
+
+p
+java:S2259T"NA "NullPointerException" could be thrown; "fileOutputStream" is nullable here.(İ˜úåùÿÿÿÿ8 ÕªË÷0
+o
+java:S2095!"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(Í©´€ùÿÿÿÿ8¡ÕªË÷0
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(–¬¾‚øÿÿÿÿ8¥ÕªË÷0
+[
+java:S1854"9Remove this useless assignment to local variable "file1".(å¢Äÿÿÿÿÿ8ÃÕªË÷0
+Z
+java:S1854"8Remove this useless assignment to local variable "file".(æƒµéûÿÿÿÿ8ÃÕªË÷0
+c
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(æƒµéûÿÿÿÿ8ÆÕªË÷0
+K
+java:S1481")Remove this unused "file" local variable.(æƒµéûÿÿÿÿ8ÇÕªË÷0
+c
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(å¢Äÿÿÿÿÿ8ÈÕªË÷0
+L
+java:S1481"*Remove this unused "file1" local variable.(å¢Äÿÿÿÿÿ8ÈÕªË÷0
+c
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(½¬›ÿÿÿÿÿ8ÈÕªË÷0
+c
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(ƒóŠøÿÿÿÿ8ÉÕªË÷0
+W	java:S125"<This block of commented-out lines of code should be removed.(¶¿–8ÊÕªË÷0
+Z	java:S106;"9Replace this use of System.out or System.err by a logger.(Îó“ºøÿÿÿÿ8ÒÕªË÷0
+L
+java:S2093 "*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8ÓÕªË÷0
+L
+java:S2093B"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8ØÕªË÷0
+L
+java:S2093_"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8ÜÕªË÷0
+]	java:S125q"<This block of commented-out lines of code should be removed.(çÍùóşÿÿÿÿ8İÕªË÷0
+G
+java:S1481~"*Remove this unused "index" local variable.(Î‚í„8ßÕªË÷0
+Y	java:S125€"<This block of commented-out lines of code should be removed.(Ô‘§¸8áÕªË÷0
+V	java:S106–"9Replace this use of System.out or System.err by a logger.(ÔËÌÒ8åÕªË÷0
+L
+java:S2093v"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8æÕªË÷0
+c
+java:S2147¯"ECombine this catch with the one at line 173, which has the same body.(ï­£Ä8óÕªË÷0
+[	java:S106§"9Replace this use of System.out or System.err by a logger.(…˜œ³úÿÿÿÿ8õÕªË÷0
+[	java:S106©"9Replace this use of System.out or System.err by a logger.(½»™Ëÿÿÿÿÿ8öÕªË÷0
+[	java:S106«"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ8÷ÕªË÷0
+M
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8úÕªË÷0
+V
+java:S1144?"4Remove this unused private "fileIOImageCopy" method.(µ½¯ïıÿÿÿÿ8€ÖªË÷0
+K
+java:S1144]".Remove this unused private "writeDemo" method.(ÙÌ¾8€ÖªË÷0
+V
+java:S1144›"3Remove this unused private "fileReaderDemo" method.(‚ÿŠ”ùÿÿÿÿ8ÖªË÷0
