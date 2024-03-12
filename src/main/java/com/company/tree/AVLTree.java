@@ -22,6 +22,7 @@ public class AVLTree {
 
     /**
      * 获取当前节点平衡因子(负值右侧不平衡，正值左侧不平衡)
+     * 二叉树上结点的左子树深度减去右子树深度的值称为平衡因子BF（Balance Factor）
      * @param root 节点
      * @return 平衡因子
      */
@@ -31,6 +32,12 @@ public class AVLTree {
     }
 
 
+    /**
+     * 平衡算法
+     * 只要二叉树上有一个结点的平衡因子的绝对值大于1，则该二叉树就是不平衡的。需要进行平衡调整。
+     * @param node
+     * @return
+     */
     public static AVLNode balance(AVLNode node){
         //什么情况需要balance 平衡因子 a,｜a｜ > 1
         int attribute = getAttribute(node);
@@ -127,7 +134,7 @@ public class AVLTree {
     public static void main(String[] args) {
 
         HashSet<Integer> keySet = new HashSet<>();
-        for (int i = 0; i < 100; ++i) {
+        for (int i = 0; i < 10; ++i) {
             keySet.add(getRandomKey());
         }
         AVLTree avlTree = new AVLTree(); // add
