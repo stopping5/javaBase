@@ -17,34 +17,34 @@ public class DoubleList {
     public DoubleList() {
         this.head = new Node(0,0);
         this.tail = new Node(0,0);
-        head.setNext(tail);
-        tail.setPre(head);
+        head.next = tail;
+        tail.pre = head;
         this.size = 0;
     }
 
 
     public void add(Node x){
-        Node pre = tail.getPre();
-        pre.setNext(x);
-        tail.setPre(x);
-        x.setNext(tail);
-        x.setPre(pre);
+        Node pre = tail.pre;
+        pre.next = x;
+        tail.pre = x;
+        x.next = tail;
+        x.pre = pre;
         size++;
     }
 
     public void remove(Node x){
-        Node pre = x.getPre();
-        Node next = x.getNext();
-        pre.setNext(next);
-        next.setPre(pre);
+        Node pre = x.pre;
+        Node next = x.next;
+        pre.next = next;
+        next.pre = pre;
         size--;
     }
 
     public Node removeFirst(){
-        if (head.getNext() == tail){
+        if (head.next == tail){
             return null;
         }
-        Node remove = head.getNext();
+        Node remove = head.next;
         remove(remove);
         return remove;
     }

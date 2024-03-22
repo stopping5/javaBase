@@ -1,11 +1,14 @@
 package com.company.sort.lur;
 
+import lombok.Data;
+
 import java.util.HashMap;
 import java.util.Objects;
 
 /**
  * 最近最少使用 https://mp.weixin.qq.com/s/b0YVCccJ8mFP6lI-1NiQOQ
  */
+@Data
 public class LURCache {
     private HashMap<Integer,Node> map;
 
@@ -45,7 +48,7 @@ public class LURCache {
     /* 删除最久未使用的元素 */
     private void removeLeastRecently() {
         Node node = list.removeFirst();
-        map.remove(node.getKey());
+        map.remove(node.key);
     }
 
     public int get(int key){
@@ -54,7 +57,7 @@ public class LURCache {
         }
         makeRecently(key);
         Node node = map.get(key);
-        return node.getVal();
+        return node.val;
     }
 
     public void put(int key,int val){
@@ -66,12 +69,8 @@ public class LURCache {
         if (Objects.equals(cap, list.getSize())){
             //超出容量，移除最近最少使用
             removeLeastRecently();
-            cap--;
         }
-
         addRecently(key,val);
-        cap++;
-
     }
 
     public static void main(String[] args) {

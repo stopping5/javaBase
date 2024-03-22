@@ -365,15 +365,14 @@ public class RBTree<T extends Comparable<T>> {
             RBTreeNode<T> uncle = getUncle(x);
             if (uncle == null) {//need to rotate 叔叔节点为空
                 RBTreeNode<T> ancestor = parent.getParent();
-                //ancestor is not null due to before  add,tree color is balance
                 // 且祖父节点、父节点处于一条斜线上。
                 if (parent == ancestor.getLeft()) {
                     boolean isRight = x == parent.getRight();
-                    //且祖父节点、父节点和新节点不处于一条斜线上。
+                    //且祖父节点、父节点和新节点不处于一条斜线上。 先最旋再右旋
                     if (isRight) {
                         rotateLeft(parent);
                     }
-                    //且祖父节点、父节点和新节点处于一条斜线上。
+                    //且祖父节点、父节点和新节点处于一条斜线上。 右旋
                     rotateRight(ancestor);
 
                     if (isRight) {
