@@ -16,14 +16,11 @@ public class QuickSort {
         }
     }
     public static void quickSort(int[] num,int low,int high){
-        //终止递归条件
-        if (low < high){
-            //获取子表
-            int k = qs(num,low,high);
-            //子表递归
-            quickSort(num,low,k-1);
-            quickSort(num,k+1,high);
-        }
+       if(low < high){
+           int partition = partition(num, low, high);
+           quickSort(num,low,partition-1);
+           quickSort(num,partition+1,high);
+       }
     }
     /**
      * 核心思想：low、high与关键字比较k
@@ -34,34 +31,28 @@ public class QuickSort {
      *
      * low == high -> 获取中间值 k的下标
      * */
-    public static int qs(int[] num, int low, int high){
-        //取关键字
-        int k = num[low];
-        //跳出条件 low=high
+    public static int partition(int[] num, int low, int high){
+      int n = num[low];
+        //前后双指针法，控制low、high指针达成目标
         while (low < high){
-            //高位大于关键字，high左移
-            while (low<high && num[high] >= k){
+            while (low < high && n <= num[high]){
                 high--;
             }
-            //高位小于关键字，和low交换，low++
-            if (num[high] < k){
+            if (n > num[high]){
                 num[low] = num[high];
                 low++;
             }
-            //low操作
-            while (low < high && num[low] < k){
+
+            while (low < high && n >= num[low]){
                 low++;
             }
-            if (num[low] > k){
+
+            if (n < num[low]){
                 num[high] = num[low];
                 high--;
             }
         }
-        num[low] = k;
-        for (int i : num) {
-            System.out.print(i+",");
-        }
-        System.out.println("");
+        num[low] = n;
         return low;
     }
 }
