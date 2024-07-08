@@ -49,7 +49,7 @@ public class JavaThreadDemo {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         //thread
         ThreadTask threadTask = new ThreadTask();
         threadTask.start();
